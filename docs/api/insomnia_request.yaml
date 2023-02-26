@@ -1,11 +1,11 @@
 _type: export
 __export_format: 4
-__export_date: 2023-03-05T16:24:40.408Z
+__export_date: 2023-03-06T11:30:55.274Z
 __export_source: insomnia.desktop.app:v2022.7.5
 resources:
   - _id: req_cd23fdb4dfab4acdbbeb3d3ce7b5c564
     parentId: fld_d3fb793ec4384c9bb52139a2f60a0035
-    modified: 1678029586440
+    modified: 1678095041768
     created: 1678028037711
     url: http://127.0.0.1:8000/listeUtilisateur
     name: "[UTIL] Liste Utilisateur"
@@ -49,7 +49,7 @@ resources:
     _type: workspace
   - _id: req_6cd496760f664381b7d84b1744b83eaf
     parentId: fld_d3fb793ec4384c9bb52139a2f60a0035
-    modified: 1678029836429
+    modified: 1678038399251
     created: 1677435990338
     url: http://127.0.0.1:8000/creationCompte
     name: Creation Compte
@@ -59,11 +59,11 @@ resources:
     parameters:
       - id: pair_954d273062194be29cb08e57c73101ff
         name: username
-        value: user1
+        value: user2
         description: ""
       - id: pair_38b25756641245178d0fe22006fbe359
         name: password
-        value: user1
+        value: user2
         description: ""
     headers: []
     authentication: {}
@@ -78,7 +78,7 @@ resources:
     _type: request
   - _id: req_b3fc4c3053544a03b98dc5c69811bf97
     parentId: fld_d3fb793ec4384c9bb52139a2f60a0035
-    modified: 1678031486411
+    modified: 1678038410558
     created: 1677449205926
     url: http://127.0.0.1:8000/connexion
     name: Connexion
@@ -88,11 +88,11 @@ resources:
     parameters:
       - id: pair_3463bb526d024b58b3cff09fa19013b9
         name: username
-        value: user1
+        value: user2
         description: ""
       - id: pair_55027030af8d402ebc5f038439c8d5cd
         name: password
-        value: user1
+        value: user2
         description: ""
     headers: []
     authentication: {}
@@ -209,10 +209,10 @@ resources:
     _type: request_group
   - _id: req_abef9f2e34434e31a0a0760f42245e1f
     parentId: fld_959b7587d6cc4f759ce19cb1cde2552f
-    modified: 1678031513274
+    modified: 1678039055382
     created: 1677449327975
     url: http://127.0.0.1:8000/insertionPersonne
-    name: insert personne
+    name: Insert Personne
     description: ""
     method: POST
     body: {}
@@ -223,38 +223,43 @@ resources:
         description: ""
       - id: pair_2b89eb5db8ee4d01b9937f7f06553fd7
         name: prenom
-        value: ER1
+        value: ER2
         description: ""
       - id: pair_5288bdb3029a401f9a6790b97975e568
         name: email
-        value: user@user.fr
+        value: user2@user.fr
         description: ""
       - id: pair_df3f2f8e40874c7db2aa7e56f6b8c0c2
         name: possedeVoiture
-        value: "true"
+        value: ""
         description: ""
+        disabled: true
       - id: pair_56b22d09be9541c7af32e566d8dbceb3
         name: plaque
-        value: FU-123-VK
+        value: ""
         description: ""
+        disabled: true
       - id: pair_0e38fc4acdd94da0a885b22cc801208d
         name: couleur
-        value: jaune
+        value: ""
         description: ""
+        disabled: true
       - id: pair_3af28269dd0143c1a7ef61a1499dd994
         name: places
-        value: "5"
+        value: ""
         description: ""
+        disabled: true
       - id: pair_d07ce7f3e87b4296aea59a8a1f696e34
         name: marque
-        value: Peugeot
+        value: ""
         description: ""
+        disabled: true
     headers: []
     authentication:
       type: apikey
       disabled: false
       key: token_api
-      value: 37c10f8e9839954dbe450707f85ba388
+      value: 3b5e13c11a8181c3c1d0da26976e4c1f
       addTo: header
     metaSortKey: -1677514274243.8594
     isPrivate: false
@@ -307,10 +312,10 @@ resources:
     _type: request
   - _id: req_15c67705b36244d686bc1fd935338bb1
     parentId: fld_959b7587d6cc4f759ce19cb1cde2552f
-    modified: 1678032277482
+    modified: 1678095316370
     created: 1677456539119
     url: http://127.0.0.1:8000/liste/personne/2
-    name: liste 1 personne
+    name: Liste Personne ID (complète)
     description: ""
     method: GET
     body: {}
@@ -569,7 +574,7 @@ resources:
     _type: request_group
   - _id: req_23afacdde3dc45ecaabf68f28947a4c6
     parentId: fld_0f0378384c7e4368bbbbfb32e902ea37
-    modified: 1678032261031
+    modified: 1678038070493
     created: 1678032213469
     url: http://127.0.0.1:8000/listeTrajet
     name: Liste Trajets
@@ -578,7 +583,12 @@ resources:
     body: {}
     parameters: []
     headers: []
-    authentication: {}
+    authentication:
+      type: apikey
+      disabled: false
+      key: ""
+      value: ""
+      addTo: header
     metaSortKey: -1677533992031.875
     isPrivate: false
     settingStoreCookies: true
