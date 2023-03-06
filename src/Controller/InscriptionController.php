@@ -14,7 +14,7 @@ use Symfony\Component\Serializer\SerializerInterface;
 class InscriptionController extends AbstractController
 {
     #[Route('/listeInscription', name: 'liste_inscription')]
-    public function listeIncription(SerializerInterface $serializerInterface, EntityManagerInterface $em): JsonResponse
+    public function listeInscription(SerializerInterface $serializerInterface, EntityManagerInterface $em): JsonResponse
     {
         $connexion = $em->getConnection();
 
@@ -30,7 +30,7 @@ class InscriptionController extends AbstractController
     }
 
     #[Route('/insertionInscription', name: 'insertion_inscription')]
-    public function insertIncription(Request $request, EntityManagerInterface $em): JsonResponse
+    public function insertionIncription(Request $request, EntityManagerInterface $em): JsonResponse
     {
         $id_utilisateur = $request->query->get('id_pers');
         $id_trajet = $request->query->get('id_trajet');
