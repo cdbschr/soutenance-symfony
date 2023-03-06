@@ -107,7 +107,7 @@ class InformationsUtilisateurController extends AbstractController
     }
 
     #[Route("/miseajourPersonne/{id}", name: "miseajour_personne", methods: "PUT")]
-    public function update(int $id, Request $request, PersonneRepository $personneRepository, EntityManagerInterface $em, UserPasswordHasherInterface $passEncoder): JsonResponse
+    public function miseajourPersonne(int $id, Request $request, PersonneRepository $personneRepository, EntityManagerInterface $em, UserPasswordHasherInterface $passEncoder): JsonResponse
     {
         $personne = $personneRepository->find($id);
         if ($personne) {
@@ -151,7 +151,7 @@ class InformationsUtilisateurController extends AbstractController
     }
 
     #[Route('/supprimerPersonne/{id}', name: 'supprimer_personne', methods: "DELETE")]
-    public function deletePersonne(int $id, PersonneRepository $doctrine, EntityManagerInterface $em): JsonResponse
+    public function supprimerPersonne(int $id, PersonneRepository $doctrine, EntityManagerInterface $em): JsonResponse
     {
         $personne = $doctrine->find($id);
 
