@@ -21,7 +21,7 @@ class UtilisateurController extends AbstractController
     }
 
     #[Route('/creationCompte', name: 'creation_compte', methods: 'POST')]
-    public function register(Request $request, UserPasswordHasherInterface $passEncoder, EntityManagerInterface $em): JsonResponse
+    public function creationCompte(Request $request, UserPasswordHasherInterface $passEncoder, EntityManagerInterface $em): JsonResponse
     {
         if ($request->isMethod('post')) {
             $utilisateur = new Utilisateur;
@@ -52,7 +52,7 @@ class UtilisateurController extends AbstractController
     }
 
     #[Route('/connexion', name: 'connexion')]
-    public function Authentification(Request $request, ManagerRegistry $doctrine): JsonResponse
+    public function authentification(Request $request, ManagerRegistry $doctrine): JsonResponse
     {
         $nom = $request->query->get('username');
         $password = $request->query->get('password');
@@ -85,7 +85,7 @@ class UtilisateurController extends AbstractController
     }
 
     #[Route('/deconnexion', name: 'deconnexion')]
-    public function logout(Request $request, EntityManagerInterface $em): JsonResponse
+    public function deconnexion(Request $request, EntityManagerInterface $em): JsonResponse
     {
         try {
             $token_api = $request->headers->get("token_api");
